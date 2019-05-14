@@ -8,6 +8,8 @@ Convert a kebab-case css to camel case css or vice-versa.
   3. Select `CSS Converter` from searched result
   4. **How's the josh** your css is converted.
 
+![how to use](images/css-converter-demo.gif)
+
 ## Example
   ### **kebab-case to camelCase**
     background-color: #FFF;   ===>   backgroundColor: "#FFF",
