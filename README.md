@@ -30,6 +30,9 @@ Convert a kebab-case css to camel case css or vice-versa.
 
 ## Release Notes
 
+### 0.0.2
+* Added how to use gif in readme
+
 ### 0.0.1
 **Initial release of CSS Converter** 
 > Identifies format of css and converts it to kebab-case or camelCase based on which css format we selected.
