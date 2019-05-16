@@ -1,6 +1,6 @@
-# css-converter (VS-Code extension)
+# CSS Converter
 
-Convert a kebab-case css to camel case css or vice-versa.
+VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ## How to use
   1. Select the CSS text you want convert
@@ -29,6 +29,9 @@ Convert a kebab-case css to camel case css or vice-versa.
 * Additional double quotes if try to convert kebab-case css to camelCase.
 
 ## Release Notes
+
+### 0.0.3
+* Added black background how to use gif in readme
 
 ### 0.0.2
 * Added how to use gif in readme
