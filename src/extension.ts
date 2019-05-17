@@ -48,24 +48,28 @@ export function activate(context: vscode.ExtensionContext) {
 			return;
 		}
 		const text = editor.document.getText(editor.selection);
-		let splittedText = _.split(text, ";");
-
-		let replacedText: string[] = [];
-
-		// HTML CSS to JS CSS (Generate Camel Case CSS)
-		if (splittedText.length > 1) {
-			replacedText = generateCamelCaseCSS(splittedText);
+		if (_.isEmpty(text)) {
+			vscode.window.showErrorMessage('You have not selected CSS!');
 		} else {
-			// JS CSS to HTML CSS (Generate kebab-case CSS)
-			replacedText = generateKebabCaseCSS(_.split(text, ","));
-		}
-		// replace generated css 
-		try {
-			editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")));
-			commands.executeCommand('editor.action.formatDocument', []);
-			vscode.window.showInformationMessage("Converted CSS");
-		} catch (e) {
-			vscode.window.showErrorMessage("Error while converting CSS!");
+			let splittedText = _.split(text, ";");
+
+			let replacedText: string[] = [];
+	
+			// HTML CSS to JS CSS (Generate Camel Case CSS)
+			if (splittedText.length > 1) {
+				replacedText = generateCamelCaseCSS(splittedText);
+			} else {
+				// JS CSS to HTML CSS (Generate kebab-case CSS)
+				replacedText = generateKebabCaseCSS(_.split(text, ","));
+			}
+			// replace generated css 
+			try {
+				editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")));
+				commands.executeCommand('editor.action.formatSelection', []);
+				vscode.window.showInformationMessage("Converted CSS");
+			} catch (e) {
+				vscode.window.showErrorMessage("Error while converting CSS!");
+			}
 		}
 	});
 	context.subscriptions.push(disposable);
