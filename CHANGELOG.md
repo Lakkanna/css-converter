@@ -7,6 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Release Notes
 
+### 0.0.4
+* Fixed auto indentaion issue
+* Fixed Additional double quotes if try to convert kebab-case css to camelCase
+
 ### 0.0.3
 * Added black background how to use gif in readme
 

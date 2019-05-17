@@ -3,19 +3,19 @@
 	"displayName": "CSS Converter",
 	"publisher": "Lakkannawalikar",
 	"description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/Lakkanna/css-converter.git"
-  },
+		"type": "git",
+		"url": "https://github.com/Lakkanna/css-converter.git"
+	},
 	"icon": "images/icon.png",
-  "galleryBanner": {
-    "color": "#C80000",
-    "theme": "dark"
-  },
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	},
 	"categories": [
 		"Other"
 	],
