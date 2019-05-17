@@ -65,7 +65,10 @@ export function activate(context: vscode.ExtensionContext) {
 			// replace generated css 
 			try {
 				editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")));
-				commands.executeCommand('editor.action.formatSelection', []);
+				const settings = vscode.workspace.getConfiguration('cssConverter');
+				if (settings.get('autoFormat')) {
+					commands.executeCommand('editor.action.formatSelection', []);
+				}
 				vscode.window.showInformationMessage("Converted CSS");
 			} catch (e) {
 				vscode.window.showErrorMessage("Error while converting CSS!");

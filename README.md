@@ -2,11 +2,16 @@
 
 VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
+### If you like 👍 give stars ⭐️ in [Github](https://github.com/Lakkanna/css-converter) and [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter&ssr=false#review-details).
 
 ### **Set this configuration in settings.json to indentation works**
   `"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
   
   `"typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
+
+  **Auto Format is default on, to turn off auto format add configuration in settings.json**
+  
+  `cssConverter.autoFormat: false`
 
 ## How to use
   1. Select the CSS text you want convert
@@ -34,6 +39,9 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 * Additional space after value # (example: backgroundColor: "#FFF",  ===>  background-color: # FFF;)
 
 ## Release Notes
+
+### 0.0.7
+* Added configuration for format, default value will be true, to turn off auto format add `cssConverter.autoFormat: false` in **settings.json**
 
 ### 0.0.6
 * fixed camelCase CSS string with comma separated values issue
