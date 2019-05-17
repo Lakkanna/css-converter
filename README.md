@@ -1,6 +1,12 @@
-# css-converter (VS-Code extension)
+# CSS Converter
 
-Convert a kebab-case css to camel case css or vice-versa.
+VS Code extension to convert a kebab-case css to camel case css or vice-versa.
+
+
+### **Set this configuration in settings.json to indentation works**
+  `"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
+  
+  `"typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
 
 ## How to use
   1. Select the CSS text you want convert
@@ -8,7 +14,7 @@ Convert a kebab-case css to camel case css or vice-versa.
   3. Select `CSS Converter` from searched result
   4. **How's the josh** your css is converted.
 
-![how to use](images/css-converter-demo.gif)
+![how to use](images/demo-kebab-camel.gif)
 
 ## Example
   ### **kebab-case to camelCase**
@@ -25,10 +31,16 @@ Convert a kebab-case css to camel case css or vice-versa.
 
 ## Known Issues
 
-* Need to fix issue of indentation after replacing new CSS
-* Additional double quotes if try to convert kebab-case css to camelCase.
+* Additional space after value # (example: backgroundColor: "#FFF",  ===>  background-color: # FFF;)
 
 ## Release Notes
+
+### 0.0.4
+* Fixed auto indentaion issue
+* Fixed Additional double quotes if try to convert kebab-case css to camelCase
+
+### 0.0.3
+* Added black background how to use gif in readme
 
 ### 0.0.2
 * Added how to use gif in readme

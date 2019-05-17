@@ -1,12 +1,21 @@
 import * as vscode from 'vscode';
+import { commands } from 'vscode';
 import * as _ from 'lodash';
+
+const replaceWhiteSpace = (value: string): string => {
+	return _.replace(value, /\s/g, '');
+};
+
+const replaceQuotes = (value: string): string => {
+	return _.replace(replaceWhiteSpace(value), /"/g, '');
+};
 
 const generateKebabCaseCSS = (lines: string[]): string[] => {
 	let returnLines: string[] = [];
 	_.forEach(lines, (line) => {
 		if (!_.isEmpty(line)) {
 			let [key, value] = _.split(line, ":");
-			const newLine = `${_.kebabCase(_.trim(key))}: ${_.trim(value)};`;
+			const newLine = `${_.kebabCase(_.trim(key))}: ${replaceQuotes(value)};`;
 			returnLines.push(newLine);
 		}
 	});
@@ -18,7 +27,7 @@ const generateCamelCaseCSS = (lines: string[]): string[] => {
 	_.forEach(lines, (line) => {
 		if (!_.isEmpty(line)) {
 			let [key, value] = _.split(line, ":");
-			const newLine = `${_.camelCase(_.trim(key))}: "${_.trim(value)}",`;
+			const newLine = `${_.camelCase(_.trim(key))}: "${replaceQuotes(value)}",`;
 			returnLines.push(newLine);
 		}
 	});
@@ -53,6 +62,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// replace generated css 
 		try {
 			editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")));
+			commands.executeCommand('editor.action.formatDocument', []);
 			vscode.window.showInformationMessage("Converted CSS");
 		} catch (e) {
 			vscode.window.showErrorMessage("Error while converting CSS!");
