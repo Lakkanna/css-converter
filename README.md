@@ -4,14 +4,18 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ### If you like 👍 give stars ⭐️ in [Github](https://github.com/Lakkanna/css-converter) and [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter&ssr=false#review-details).
 
-### **Set this configuration in settings.json to indentation works**
+  **To turn off autoFormat add configuration in settings.json**
+
+  `"cssConverter.autoFormat": false,`
+
+  **If you want to turn on autoFormat add configuration in settings.json**
+
+  `"cssConvert.autoFormat": true,`  *(optional)*
+
   `"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
   
   `"typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
 
-  **Auto Format is default on, to turn off auto format add configuration in settings.json**
-  
-  `cssConverter.autoFormat: false`
 
 ## How to use
   1. Select the CSS text you want convert
@@ -40,8 +44,11 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ## Release Notes
 
+### 0.0.8
+* Updated README.md
+
 ### 0.0.7
-* Added configuration for format, default value will be true, to turn off auto format add `cssConverter.autoFormat: false` in **settings.json**
+* Added configuration for format, default value will be true, to turn off auto format add `"cssConverter.autoFormat": false` in **settings.json**
 
 ### 0.0.6
 * fixed camelCase CSS string with comma separated values issue
@@ -60,8 +67,9 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 * Added how to use gif in readme
 
 ### 0.0.1
-**Initial release of CSS Converter** 
-> Identifies format of css and converts it to kebab-case or camelCase based on which css format we selected.
+* *Initial release of CSS Converter*
+
+* Identifies format of css and converts it to kebab-case or camelCase based on which css format we selected.
 
 -----------------------------------------------------------------------------------------------------------
 

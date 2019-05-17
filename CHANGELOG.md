@@ -7,6 +7,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Release Notes
 
+### 0.0.8
+* Updated README.md
+
 ### 0.0.7
 * Added configuration for format, default value will be true, to turn off auto format add `cssConverter.autoFormat: false` in **settings.json**
 
