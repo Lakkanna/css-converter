@@ -3,7 +3,7 @@
 	"displayName": "CSS Converter",
 	"publisher": "Lakkannawalikar",
 	"description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -13,7 +13,7 @@
 	},
 	"icon": "images/icon.png",
 	"galleryBanner": {
-		"color": "#C80000",
+		"color": "#2d2d2d",
 		"theme": "dark"
 	},
 	"categories": [

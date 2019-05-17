@@ -60,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
 				replacedText = generateCamelCaseCSS(splittedText);
 			} else {
 				// JS CSS to HTML CSS (Generate kebab-case CSS)
-				replacedText = generateKebabCaseCSS(_.split(text, ","));
+				replacedText = generateKebabCaseCSS(_.split(text, "\","));
 			}
 			// replace generated css 
 			try {
