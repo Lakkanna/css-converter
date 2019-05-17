@@ -7,6 +7,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Release Notes
 
+### 0.0.5
+* Fixed format should apply only for selected range
+
 ### 0.0.4
 * Fixed auto indentaion issue
 * Fixed Additional double quotes if try to convert kebab-case css to camelCase
