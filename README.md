@@ -35,6 +35,9 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ## Release Notes
 
+### 0.0.6
+* fixed camelCase CSS string with comma separated values issue
+
 ### 0.0.5
 * Fixed format should apply only for selected range
 
