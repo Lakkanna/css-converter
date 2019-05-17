@@ -4,6 +4,14 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ### If you like 👍 give stars ⭐️ in [Github](https://github.com/Lakkanna/css-converter) and [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter&ssr=false#review-details).
 
+## How to use
+  1. Select the CSS text you want convert
+  2. Open  `Command Pallette (Shift + Command + P) / (Shift + Control + P)` in VS-Code and enter `CSS Converter`
+  3. Select `CSS Converter` from searched result
+  4. **How's the josh** your css is converted.
+
+![how to use](images/demo-kebab-camel.gif)
+
   **To turn off autoFormat add configuration in settings.json**
 
   `"cssConverter.autoFormat": false,`
@@ -16,14 +24,6 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
   
   `"typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,`
 
-
-## How to use
-  1. Select the CSS text you want convert
-  2. Open  `Command Pallette (Shift + Command + P) / (Shift + Control + P)` in VS-Code and enter `CSS Converter`
-  3. Select `CSS Converter` from searched result
-  4. **How's the josh** your css is converted.
-
-![how to use](images/demo-kebab-camel.gif)
 
 ## Example
   ### **kebab-case to camelCase**
@@ -43,6 +43,9 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 * Additional space after value # (example: backgroundColor: "#FFF",  ===>  background-color: # FFF;)
 
 ## Release Notes
+
+### 0.0.9
+* Moved demo gif top in Updated README.md
 
 ### 0.0.8
 * Updated README.md
