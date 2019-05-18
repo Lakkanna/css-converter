@@ -7,6 +7,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Release Notes
 
+### 0.1.1
+* Added key binding
+
+  *mac* - `Shift + Command + V`
+
+  *window/linux* - `Shift + Ctrl + V`
+
+### 0.1.0
+* Added Key binding
+
 ### 0.0.9
 * Moved demo gif top in Updated README.md
 
