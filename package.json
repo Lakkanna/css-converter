@@ -3,7 +3,7 @@
 	"displayName": "CSS Converter",
 	"publisher": "Lakkannawalikar",
 	"description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -45,10 +45,10 @@
 		"keybindings":[
 			{
 				"command": "extension.cssConverter",
-				"key": "cmd+c+c",
-				"mac": "cmd+c+c",
-				"win": "ctrl+c+c",
-				"linux": "ctrl+c+c"
+				"key": "shift+cmd+v",
+				"mac": "shift+cmd+v",
+				"win": "shift+ctrl+v",
+				"linux": "shift+ctrl+v"
 			}
 		]
 	},
