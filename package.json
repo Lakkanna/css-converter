@@ -41,6 +41,15 @@
 					}
 				}
 			}
+		],
+		"keybindings":[
+			{
+				"command": "extension.cssConverter",
+				"key": "cmd+c+c",
+				"mac": "cmd+c+c",
+				"win": "ctrl+c+c",
+				"linux": "ctrl+c+c"
+			}
 		]
 	},
 	"scripts": {
