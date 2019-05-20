@@ -1,6 +1,4 @@
 language: node_js
 node_js:
-  - "node"
-
-before_install:
-  "sudo apt-get install libdbus-1.so.3"
+  - "12.2.0"
+os: osx
