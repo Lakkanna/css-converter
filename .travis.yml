@@ -3,4 +3,4 @@ node_js:
   - "node"
 
 before_install:
-  "npm install vscode"
+  "sudo apt-get install libdbus-1.so.3"
