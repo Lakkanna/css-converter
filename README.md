@@ -1,6 +1,8 @@
 # CSS Converter
 
-VS Code extension to convert a kebab-case css to camel case css or vice-versa.
+![build](https://travis-ci.org/Lakkanna/css-converter.svg?branch=master)
+
+VS Code extension to convert a kebab-case css to camel case css or vice-versa. 
 
 ### If you like 👍 give stars ⭐️ in [Github](https://github.com/Lakkanna/css-converter) and [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter&ssr=false#review-details).
 
