@@ -10,7 +10,7 @@ const replaceQuotes = (value: string): string => {
 	return _.replace(replaceWhiteSpace(value), /"/g, '');
 };
 
-const generateKebabCaseCSS = (lines: string[]): string[] => {
+export const generateKebabCaseCSS = (lines: string[]): string[] => {
 	let returnLines: string[] = [];
 	_.forEach(lines, (line) => {
 		if (!_.isEmpty(line)) {
@@ -22,7 +22,7 @@ const generateKebabCaseCSS = (lines: string[]): string[] => {
 	return returnLines;
 };
 
-const generateCamelCaseCSS = (lines: string[]): string[] => {
+export const generateCamelCaseCSS = (lines: string[]): string[] => {
 	let returnLines: string[] = [];
 	_.forEach(lines, (line) => {
 		if (!_.isEmpty(line)) {
