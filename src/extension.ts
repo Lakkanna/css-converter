@@ -61,7 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 			// replace generated css 
 			try {
-				editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")));
+				editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")), { undoStopBefore: true, undoStopAfter: true, });
 				const settings = vscode.workspace.getConfiguration('cssConverter');
 				if (settings.get('autoFormat')) {
 					commands.executeCommand('editor.action.formatSelection', []);
