@@ -3,10 +3,21 @@
 	"displayName": "CSS Converter",
 	"publisher": "Lakkannawalikar",
 	"description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
+	"keywords": [
+		"css",
+		"converter",
+		"style",
+		"css convert",
+		"js style",
+		"camel case",
+		"kebab case",
+		"style component",
+		"styled"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Lakkanna/css-converter.git"
