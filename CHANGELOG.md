@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.3] - 2019-11-23
+### Fixed
+- Extension activation
+
 ## [0.1.2] - 2019-05-21
 ### Added
 - Configuration for travis-ci

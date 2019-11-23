@@ -51,7 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
 			let splittedText = _.split(text, ";");
 
 			let replacedText: string[] = [];
-	
+
 			// HTML CSS to JS CSS (Generate Camel Case CSS)
 			if (splittedText.length > 1) {
 				replacedText = generateCamelCaseCSS(splittedText);
@@ -59,7 +59,7 @@ export function activate(context: vscode.ExtensionContext) {
 				// JS CSS to HTML CSS (Generate kebab-case CSS)
 				replacedText = generateKebabCaseCSS(_.split(text, "\","));
 			}
-			// replace generated css 
+			// replace generated css
 			try {
 				editor.edit(e => e.replace(editor.selection, _.join(replacedText, "\n")), { undoStopBefore: true, undoStopAfter: true, });
 				const settings = vscode.workspace.getConfiguration('cssConverter');
