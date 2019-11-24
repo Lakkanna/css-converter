@@ -57,7 +57,10 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ## Release Notes
 
-## [Unreleased]
+## [0.1.4] - 2019-11-24
+### Changed
+- Removed unwanted libraries
+- Project re-structured
 
 ## [0.1.3] - 2019-11-23
 ### Fixed
