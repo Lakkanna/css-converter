@@ -4,6 +4,11 @@ import generateCamelCaseCSS from '../utils/generateCamelCaseCSS';
 
 const camelCaseCss = `color: "red", fontWeight: "600",`;
 
+const camelCaseCss2 = `		color: "red",
+fontSize: "12px",
+fontWeight: "bold",
+align: "center",`;
+
 const kebabCaseCss = `color: red; font-weight: 600;`;
 
 const kebabCaseCss2 = `	color: red;
@@ -22,7 +27,7 @@ suite("Extension Tests", function () {
 
     test("Should generate kebab-case css 2", function() {
         const testCss = ["color: red;", "font-size: 12px;", "font-weight: bold;", "align: center;"];
-        const generatedCss = generateKebabCaseCSS(camelCaseCss.split(","));
+        const generatedCss = generateKebabCaseCSS(camelCaseCss2.split(","));
         assert.equal(testCss.join("\n"), generatedCss.join("\n"));
     });
 
