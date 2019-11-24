@@ -1,12 +1,7 @@
-//
-// Note: This example test is leveraging the Mocha test framework.
-// Please refer to their documentation on https://mochajs.org/ for help.
-//
-
-// The module 'assert' provides assertion methods from node
 import * as assert from 'assert';
 import * as _ from 'lodash';
-import { generateKebabCaseCSS, generateCamelCaseCSS } from '../extension';
+import generateKebabCaseCSS from '../utils/generateKebabCaseCSS';
+import generateCamelCaseCSS from '../utils/generateCamelCaseCSS';
 
 const camelCaseCss = `color: "red", fontWeight: "600",`;
 const camelCaseCss2 = `		color: "red",
@@ -18,10 +13,6 @@ const kababCaseCss2 = `	color: red;
 font-size: 12px;
 font-weight: bold;
 align: center;`;
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-// import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite("Extension Tests", function () {
