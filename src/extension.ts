@@ -1,5 +1,5 @@
-import * as vscode from 'vscode';
-import * as _ from 'lodash';
+import vscode from 'vscode';
+import isEmpty from 'lodash.isempty';
 import getConvertedCSS from './utils/getConvertedCSS';
 import writeToEditor from './utils/writeToEditor';
 
@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 			return;
 		}
 		const text = editor.document.getText(editor.selection);
-		if (_.isEmpty(text)) {
+		if (isEmpty(text)) {
 			vscode.window.showErrorMessage('You have not selected CSS!');
 		} else {
       const convertedCSS = getConvertedCSS(text);

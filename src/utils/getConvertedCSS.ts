@@ -3,7 +3,6 @@
  * @description css converter
  */
 
-import * as _ from 'lodash';
 import generateCamelCaseCSS from './generateCamelCaseCSS';
 import generateKebabCaseCSS from './generateKebabCaseCss';
 
@@ -13,18 +12,21 @@ import generateKebabCaseCSS from './generateKebabCaseCss';
  * @returns {string[]}    converted css
  */
 const getConvertedCSS = (text: string): string[] => {
-  let splittedText = _.split(text, ";");
+	if (typeof text === 'string') {
+		let splittedText = text.split(";");
 
-			let convertedCss: string[] = [];
+				let convertedCss: string[] = [];
 
-			// HTML CSS to JS CSS (Generate Camel Case CSS)
-			if (splittedText.length > 1) {
-				convertedCss = generateCamelCaseCSS(splittedText);
-			} else {
-				// JS CSS to HTML CSS (Generate kebab-case CSS)
-				convertedCss = generateKebabCaseCSS(_.split(text, "\","));
-      }
-      return convertedCss;
+				// HTML CSS to JS CSS (Generate Camel Case CSS)
+				if (splittedText.length > 1) {
+					convertedCss = generateCamelCaseCSS(splittedText);
+				} else {
+					// JS CSS to HTML CSS (Generate kebab-case CSS)
+					convertedCss = generateKebabCaseCSS(text.split("\","));
+				}
+				return convertedCss;
+	}
+	return ['']
 }
 
 export default getConvertedCSS;

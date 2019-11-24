@@ -3,7 +3,9 @@
  * @description kebab case css generator
  */
 
-import * as _ from 'lodash';
+import isEmpty from 'lodash.isempty';
+import kebabCase from 'lodash.kebabcase';
+
 import removeQuotes from './removeQuotes';
 
 /**
@@ -12,15 +14,19 @@ import removeQuotes from './removeQuotes';
  * @returns {string[]}          converted kebab case css
  */
 const generateKebabCaseCSS = (lines: string[]): string[] => {
-	let returnLines: string[] = [];
-	_.forEach(lines, (line) => {
-		if (!_.isEmpty(line)) {
-			let [key, value] = _.split(line, ":");
-			const newLine = `${_.kebabCase(_.trim(key))}: ${removeQuotes(value)};`;
-			returnLines.push(newLine);
-		}
-	});
-	return returnLines;
+  let returnLines: string[] = [];
+  if (Array.isArray(lines)) {
+    lines.forEach((line) => {
+        if (!isEmpty(line) && typeof line === 'string') {
+        let [key, value] = line.split(":");
+        const newLine = `${kebabCase(key.trim())}: ${removeQuotes(value)};`;
+        returnLines.push(newLine);
+      }
+    })
+    return returnLines;
+  }
+  return [""];
 };
+
 
 export default generateKebabCaseCSS;

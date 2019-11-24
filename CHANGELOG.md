@@ -1,6 +1,9 @@
 # Change Log
 
-## [Unreleased]
+## [0.1.4] - 2019-11-24
+### Changed
+- Removed unwanted libraries
+- Project re-structured
 
 ## [0.1.3] - 2019-11-23
 ### Fixed

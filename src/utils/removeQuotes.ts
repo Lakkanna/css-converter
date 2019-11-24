@@ -3,8 +3,7 @@
  * @description remove quotes
  */
 
-import * as _ from 'lodash';
-import removeWhitespaces from './removeWhitespaces';
+ import removeWhitespaces from './removeWhitespaces';
 
  /**
   * function to remove quotes from string
@@ -12,7 +11,8 @@ import removeWhitespaces from './removeWhitespaces';
   * @returns {string} string value removed quotes and whitespaces
   */
  const removeQuotesFromString = (value: string): string => {
-	return _.replace(removeWhitespaces(value), /"/g, '');
+   const withoutWhiteSpace = removeWhitespaces(value);
+   return withoutWhiteSpace.replace(/"/g, '')
 };
 
 export default removeQuotesFromString;
