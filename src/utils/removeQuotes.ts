@@ -12,7 +12,7 @@
   */
  const removeQuotesFromString = (value: string): string => {
    const withoutWhiteSpace = removeWhitespaces(value);
-   return withoutWhiteSpace.replace(/"/g, '')
+   return withoutWhiteSpace.replace(/["']/g, '')
 };
 
 export default removeQuotesFromString;
