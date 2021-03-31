@@ -7,7 +7,19 @@
 
 VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
+<h3>
+  <a href="./CONTRIBUTING.md">Contribute</a>
+  <span> · </span>
+  <a href="./CODE_OF_CONDUCT.md">Code of Conduct</a>
+  <span> · </span>
+  <a href="./CHANGELOG.md">Change Log</a>
+</h3>
+
+<br />
+
 ### If you like 👍 give stars ⭐️ in [Github](https://github.com/Lakkanna/css-converter) and [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter&ssr=false#review-details).
+
+<br />
 
 ## How to use
 
