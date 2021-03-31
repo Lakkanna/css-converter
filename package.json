@@ -1,89 +1,89 @@
 {
-	"name": "css-converter",
-	"displayName": "CSS Converter",
-	"publisher": "Lakkannawalikar",
-	"description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-	"version": "0.1.5",
-	"engines": {
-		"vscode": "^1.33.0"
-	},
-	"keywords": [
-		"css",
-		"converter",
-		"style",
-		"css convert",
-		"js style",
-		"camel case",
-		"kebab case",
-		"style component",
-		"styled"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Lakkanna/css-converter.git"
-	},
-	"icon": "images/icon.png",
-	"galleryBanner": {
-		"color": "#2d2d2d",
-		"theme": "dark"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.cssConverter"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.cssConverter",
-				"title": "CSS Converter"
-			}
-		],
-		"configuration": [
-			{
-				"title": "CSS Converter configuration",
-				"properties": {
-					"cssConverter.autoFormat": {
-						"type": "boolean",
-						"default": true,
-						"description": "Auto format generated css"
-					}
-				}
-			}
-		],
-		"keybindings": [
-			{
-				"command": "extension.cssConverter",
-				"key": "shift+cmd+v",
-				"mac": "shift+cmd+v",
-				"win": "shift+ctrl+v",
-				"linux": "shift+ctrl+v"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"@types/lodash": "4.14.149",
-		"@types/lodash.camelcase": "4.3.6",
-		"@types/lodash.isempty": "4.4.6",
-		"@types/lodash.kebabcase": "4.1.6",
-		"@types/mocha": "7.0.1",
-		"@types/node": "13.7.4",
-		"tslint": "6.0.0",
-		"typescript": "3.8.2",
-		"vscode": "1.1.36"
-	},
-	"dependencies": {
-		"lodash.camelcase": "4.3.0",
-		"lodash.isempty": "4.4.0",
-		"lodash.kebabcase": "4.1.1"
-	}
+  "name": "css-converter",
+  "displayName": "CSS Converter",
+  "publisher": "Lakkannawalikar",
+  "description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
+  "version": "0.1.6",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "keywords": [
+    "css",
+    "converter",
+    "style",
+    "css convert",
+    "js style",
+    "camel case",
+    "kebab case",
+    "style component",
+    "styled"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lakkanna/css-converter.git"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#2d2d2d",
+    "theme": "dark"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.cssConverter"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.cssConverter",
+        "title": "CSS Converter"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "CSS Converter configuration",
+        "properties": {
+          "cssConverter.autoFormat": {
+            "type": "boolean",
+            "default": true,
+            "description": "Auto format generated css"
+          }
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.cssConverter",
+        "key": "shift+cmd+v",
+        "mac": "shift+cmd+v",
+        "win": "shift+ctrl+v",
+        "linux": "shift+ctrl+v"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/lodash.camelcase": "4.3.6",
+    "@types/lodash.isempty": "4.4.6",
+    "@types/lodash.kebabcase": "4.1.6",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "lodash.camelcase": "4.3.0",
+    "lodash.isempty": "4.4.0",
+    "lodash.kebabcase": "4.1.1"
+  }
 }

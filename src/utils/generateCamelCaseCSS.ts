@@ -3,9 +3,9 @@
  * @description camel case css generator
  */
 
-import isEmpty from 'lodash.isempty';
-import camelCase from 'lodash.camelcase';
-import removeQuotes from './removeQuotes';
+import isEmpty from "lodash.isempty";
+import camelCase from "lodash.camelcase";
+import removeQuotes from "./removeQuotes";
 
 /**
  * function to kebab case css into camel case css
@@ -16,12 +16,16 @@ const generateCamelCaseCSS = (lines: string[]): string[] => {
   let returnLines: string[] = [];
   if (Array.isArray(lines)) {
     lines.forEach((line) => {
-      if (!isEmpty(line) && typeof line === 'string') {
+      if (!isEmpty(line) && typeof line === "string") {
         let [key, value] = line.split(":");
-        const newLine = `${camelCase(key.trim())}: "${removeQuotes(value)}",`;
+        let propertyValue: unknown = removeQuotes(value);
+        propertyValue = isNaN(propertyValue as number)
+          ? `"${propertyValue}"`
+          : propertyValue;
+        const newLine = `${camelCase(key.trim())}: ${propertyValue},`;
         returnLines.push(newLine);
       }
-    })
+    });
     return returnLines;
   }
   return [""];
