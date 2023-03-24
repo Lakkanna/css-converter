@@ -30,6 +30,9 @@
   "categories": [
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:extension.cssConverter"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
