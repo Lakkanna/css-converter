@@ -3,9 +3,9 @@
   "displayName": "CSS Converter",
   "publisher": "Lakkannawalikar",
   "description": "Convert HTML CSS to JS CSS for styled components and vice-versa.",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.74.0"
   },
   "keywords": [
     "css",
@@ -29,9 +29,6 @@
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.cssConverter"
   ],
   "main": "./out/extension.js",
   "contributes": {
