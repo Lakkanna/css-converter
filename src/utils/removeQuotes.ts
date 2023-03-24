@@ -2,6 +2,7 @@
  * @author Lakkanna Walikar
  * @description remove quotes
  */
+import trim from "lodash.trim";
 
 /**
  * function to remove quotes from string
@@ -11,7 +12,7 @@
 const removeQuotesFromString = (value: string): string => {
   // Issue: https://github.com/Lakkanna/css-converter/issues/21 and https://github.com/Lakkanna/css-converter/issues/22
   // This is fixed now
-  const withoutWhiteSpace = value.trim();
+  const withoutWhiteSpace = trim(value);
   return withoutWhiteSpace.replace(/["']/g, "");
 };
 

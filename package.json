@@ -70,19 +70,38 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
+    "@types/glob": "^8.1.0",
     "@types/lodash": "^4.14.168",
     "@types/lodash.camelcase": "4.3.6",
+    "@types/lodash.includes": "^4.3.7",
     "@types/lodash.isempty": "4.4.6",
     "@types/lodash.kebabcase": "4.1.6",
+    "@types/lodash.trim": "^4.5.7",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.37",
+    "@types/vscode": "^1.76.0",
+    "@vscode/test-electron": "^2.3.0",
+    "mocha": "^10.2.0",
     "tslint": "^6.1.3",
-    "typescript": "^4.2.3",
-    "vscode": "^1.1.37"
+    "typescript": "^4.2.3"
   },
   "dependencies": {
+    "@types/lodash.compact": "^3.0.7",
+    "@types/lodash.join": "^4.0.7",
+    "@types/lodash.map": "^4.6.13",
+    "@types/lodash.split": "^4.4.7",
+    "@types/lodash.startswith": "^4.2.7",
+    "@types/lodash.upperfirst": "^4.3.7",
     "lodash.camelcase": "4.3.0",
+    "lodash.compact": "^3.0.1",
+    "lodash.includes": "^4.3.0",
     "lodash.isempty": "4.4.0",
-    "lodash.kebabcase": "4.1.1"
+    "lodash.join": "^4.0.1",
+    "lodash.kebabcase": "4.1.1",
+    "lodash.map": "^4.6.0",
+    "lodash.split": "^4.4.2",
+    "lodash.startswith": "^4.2.1",
+    "lodash.trim": "^4.5.1",
+    "lodash.upperfirst": "^4.3.1"
   }
 }
