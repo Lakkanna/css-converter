@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.1.7] - 2021-03-24
+
+### Fixed
+
+- The space disappears after converting a negative number [#21](https://github.com/Lakkanna/css-converter/issues/21)
+- The space disappears after converting complex value [#22](https://github.com/Lakkanna/css-converter/issues/22)
+- Css styles staring with '-' (-webkit-background-clip: text) should keep capitalization on first character [#23](https://github.com/Lakkanna/css-converter/issues/23)
+
 ## [0.1.6] - 2021-03-31
 
 ### Changed
