@@ -1,5 +1,23 @@
 # Change Log
 
+## [0.2.2] - 2021-03-25
+
+### Fixed
+
+- Removing `/` from rule
+
+  Original css:
+
+      border-radius: 100%/130% 130% 15px 15px;
+
+  Previous conversion result:
+
+      borderRadius: "100%130% 130% 15px 15px",
+
+  Current/Fixed conversion result:
+
+      borderRadius: "100%/130% 130% 15px 15px",
+
 ## [0.2.1] - 2021-03-25
 
 ### Fixed
