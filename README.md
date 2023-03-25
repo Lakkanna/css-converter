@@ -1,10 +1,5 @@
 # CSS Converter
 
-[![](https://vsmarketplacebadge.apphb.com/version-short/Lakkannawalikar.css-converter.svg)](https://marketplace.visualstudio.com/items?itemName=lakkanna.css-converter)
-[![](https://vsmarketplacebadge.apphb.com/downloads-short/Lakkannawalikar.css-converter.svg)](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter)
-[![](https://vsmarketplacebadge.apphb.com/rating-short/Lakkannawalikar.css-converter.svg)](https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.css-converter)
-![build](https://travis-ci.org/Lakkanna/css-converter.svg?branch=master)
-
 VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 <h3>
