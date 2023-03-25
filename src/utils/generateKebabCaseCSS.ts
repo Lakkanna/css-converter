@@ -5,6 +5,7 @@
 
 import isEmpty from "lodash.isempty";
 import kebabCase from "lodash.kebabcase";
+import { addPrefixDashIfNeeded } from "./addPrefixDashIfNeeded";
 
 import { removeQuotesFromString } from "./removeQuotes";
 
@@ -19,9 +20,9 @@ const generateKebabCaseCSS = (lines: string[]): string[] => {
     lines.forEach((line) => {
       if (!isEmpty(line) && typeof line === "string") {
         let [key, value] = line.split(":");
-        const newLine = `${kebabCase(key.trim())}: ${removeQuotesFromString(
-          value
-        )};`;
+        key = kebabCase(key.trim());
+        key = addPrefixDashIfNeeded(key);
+        const newLine = `${key}: ${removeQuotesFromString(value)};`;
         returnLines.push(newLine);
       }
     });
