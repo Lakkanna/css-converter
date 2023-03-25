@@ -3,7 +3,6 @@
  * @param {string} value - A value to get remove quotes
  * @returns {string} string value removed quotes and whitespaces
  */
-
 import trim from "lodash.trim";
 
 const removeQuotesFromString = (value: string): string => {

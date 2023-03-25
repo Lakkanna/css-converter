@@ -1,4 +1,5 @@
 import * as assert from "assert";
+
 import generateKebabCaseCSS from "../utils/generateKebabCaseCSS";
 import generateCamelCaseCSS from "../utils/generateCamelCaseCSS";
 
@@ -35,6 +36,19 @@ suite("Extension Tests", function () {
     assert.deepStrictEqual(testCss.join("\n"), generatedCss.join("\n"));
   });
 
+  test("should generate camelCase with spacing withing the string and remove only trainling spaces", () => {
+    const inputCss = `border-radius: 100%/130% 130% 15px 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    text-shadow: -1px -1px 0 #000,2px -1px 0 #000,2px 2px 0 #000,-1px 2px 0 #000,2px 3px 0 #000,1px 3px 0 #000,2px 3px 0 #000;`;
+
+    const expectedArray = [
+      'borderRadius: "100%/130% 130% 15px 15px",',
+      'boxShadow: "0 1px 2px rgba(0,0,0,.5)",',
+      'textShadow: "-1px -1px 0 #000,2px -1px 0 #000,2px 2px 0 #000,-1px 2px 0 #000,2px 3px 0 #000,1px 3px 0 #000,2px 3px 0 #000",',
+    ];
+    const generatedCss = generateCamelCaseCSS(inputCss.split(";"));
+    assert.deepStrictEqual(expectedArray.join("\n"), generatedCss.join("\n"));
+  });
   test("Should generate camelCase css 1", function () {
     const testCss = ['color: "red",', "fontWeight: 600,"];
     const generatedCss = generateCamelCaseCSS(kebabCaseCss.split(";"));
