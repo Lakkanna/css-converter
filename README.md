@@ -66,6 +66,54 @@ VS Code extension to convert a kebab-case css to camel case css or vice-versa.
 
 ## Release Notes
 
+## [0.2.1] - 2021-03-25
+
+### Fixed
+
+- Adding `-` to the webkit prefixed strings
+
+  Issue
+
+      webkit-background-clip: text;
+
+  Fixed
+
+      -webkit-background-clip: text;
+
+## [0.2.0] - 2021-03-25
+
+### Fixed
+
+- Previous extension was not installing due to package dependencies
+- Removing new line before operating on string values
+- The space disappears after converting a negative number [#21](https://github.com/Lakkanna/css-converter/issues/21)
+- The space disappears after converting complex value [#22](https://github.com/Lakkanna/css-converter/issues/22)
+- Css styles staring with '-' (-webkit-background-clip: text) should keep capitalization on first character [#23](https://github.com/Lakkanna/css-converter/issues/23)
+
+## [0.1.9] - 2021-03-25
+
+### Fixed
+
+- Previous extension was not installing due to package dependencies
+- Removing new line before operating on string values
+- The space disappears after converting a negative number [#21](https://github.com/Lakkanna/css-converter/issues/21)
+- The space disappears after converting complex value [#22](https://github.com/Lakkanna/css-converter/issues/22)
+- Css styles staring with '-' (-webkit-background-clip: text) should keep capitalization on first character [#23](https://github.com/Lakkanna/css-converter/issues/23)
+
+## [0.1.8] - 2021-03-24
+
+### Changed
+
+- Removed badges from README.md
+
+## [0.1.7] - 2021-03-24
+
+### Fixed
+
+- The space disappears after converting a negative number [#21](https://github.com/Lakkanna/css-converter/issues/21)
+- The space disappears after converting complex value [#22](https://github.com/Lakkanna/css-converter/issues/22)
+- Css styles staring with '-' (-webkit-background-clip: text) should keep capitalization on first character [#23](https://github.com/Lakkanna/css-converter/issues/23)
+
 ## [0.1.6] - 2021-03-31
 
 ### Changed

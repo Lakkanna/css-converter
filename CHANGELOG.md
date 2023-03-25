@@ -1,5 +1,19 @@
 # Change Log
 
+## [0.2.1] - 2021-03-25
+
+### Fixed
+
+- Adding `-` to the webkit prefixed strings
+
+  Issue
+
+      webkit-background-clip: text;
+
+  Fixed
+
+      -webkit-background-clip: text;
+
 ## [0.2.0] - 2021-03-25
 
 ### Fixed
