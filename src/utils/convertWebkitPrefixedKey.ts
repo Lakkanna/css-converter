@@ -6,7 +6,9 @@ import join from "lodash.join";
 
 // -webkit-background-clip => WebkitBackgroundClip
 const convertWebkitPrefixedKey = (key: string): string => {
-  const values = map(compact(split(key, "-")), (value) => upperFirst(value));
+  const values = map(compact(split(key, "-")), (value: string) =>
+    upperFirst(value)
+  );
   return join(values, "");
 };
 

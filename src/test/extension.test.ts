@@ -1,7 +1,7 @@
 import * as assert from "assert";
 
-import generateKebabCaseCSS from "../../utils/generateKebabCaseCSS";
-import generateCamelCaseCSS from "../../utils/generateCamelCaseCSS";
+import generateKebabCaseCSS from "../utils/generateKebabCaseCSS";
+import generateCamelCaseCSS from "../utils/generateCamelCaseCSS";
 
 const camelCaseCss = `color: "red", fontWeight: "600",`;
 

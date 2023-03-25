@@ -5,11 +5,11 @@
 
 import isEmpty from "lodash.isempty";
 import camelCase from "lodash.camelcase";
-import includes from "lodash.includes";
 import startsWith from "lodash.startswith";
+import includes from "lodash.includes";
 import trim from "lodash.trim";
 
-import removeQuotes from "./removeQuotes";
+import { removeQuotesFromString } from "./removeQuotes";
 import { convertWebkitPrefixedKey } from "./convertWebkitPrefixedKey";
 
 /**
@@ -30,7 +30,7 @@ const generateCamelCaseCSS = (lines: string[]): string[] => {
         } else {
           key = camelCase(trim(key));
         }
-        let propertyValue: unknown = removeQuotes(value);
+        let propertyValue: unknown = removeQuotesFromString(value);
         propertyValue = isNaN(propertyValue as number)
           ? `"${propertyValue}"`
           : propertyValue;
