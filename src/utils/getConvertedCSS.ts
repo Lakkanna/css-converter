@@ -3,8 +3,11 @@
  * @description css converter
  */
 
-import generateCamelCaseCSS from './generateCamelCaseCSS';
-import generateKebabCaseCSS from './generateKebabCaseCss';
+import trim from "lodash.trim";
+
+import generateCamelCaseCSS from "./generateCamelCaseCSS";
+import generateKebabCaseCSS from "./generateKebabCaseCss";
+import { removeNewLines } from "./removeNewLines";
 
 /**
  * function to identify to which format to convert css and convert css
@@ -12,21 +15,22 @@ import generateKebabCaseCSS from './generateKebabCaseCss';
  * @returns {string[]}    converted css
  */
 const getConvertedCSS = (text: string): string[] => {
-	if (typeof text === 'string') {
-		let splittedText = text.split(";");
+  const cleanText = trim(removeNewLines(text));
+  if (typeof cleanText === "string") {
+    let splittedText = cleanText.split(";");
 
-				let convertedCss: string[] = [];
+    let convertedCss: string[] = [];
 
-				// HTML CSS to JS CSS (Generate Camel Case CSS)
-				if (splittedText.length > 1) {
-					convertedCss = generateCamelCaseCSS(splittedText);
-				} else {
-					// JS CSS to HTML CSS (Generate kebab-case CSS)
-					convertedCss = generateKebabCaseCSS(text.split("\","));
-				}
-				return convertedCss;
-	}
-	return ['']
-}
+    // HTML CSS to JS CSS (Generate Camel Case CSS)
+    if (splittedText.length > 1) {
+      convertedCss = generateCamelCaseCSS(splittedText);
+    } else {
+      // JS CSS to HTML CSS (Generate kebab-case CSS)
+      convertedCss = generateKebabCaseCSS(cleanText.split('",'));
+    }
+    return convertedCss;
+  }
+  return [""];
+};
 
 export default getConvertedCSS;

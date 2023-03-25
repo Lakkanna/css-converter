@@ -5,7 +5,12 @@
 
 import isEmpty from "lodash.isempty";
 import camelCase from "lodash.camelcase";
-import removeQuotes from "./removeQuotes";
+import startsWith from "lodash.startswith";
+import includes from "lodash.includes";
+import trim from "lodash.trim";
+
+import { removeQuotesFromString } from "./removeQuotes";
+import { convertWebkitPrefixedKey } from "./convertWebkitPrefixedKey";
 
 /**
  * function to kebab case css into camel case css
@@ -18,11 +23,18 @@ const generateCamelCaseCSS = (lines: string[]): string[] => {
     lines.forEach((line) => {
       if (!isEmpty(line) && typeof line === "string") {
         let [key, value] = line.split(":");
-        let propertyValue: unknown = removeQuotes(value);
+        // issue: https://github.com/Lakkanna/css-converter/issues/23
+        // fixed
+        if (includes(key, "-webkit") || startsWith(key, "-")) {
+          key = convertWebkitPrefixedKey(trim(key));
+        } else {
+          key = camelCase(trim(key));
+        }
+        let propertyValue: unknown = removeQuotesFromString(value);
         propertyValue = isNaN(propertyValue as number)
           ? `"${propertyValue}"`
           : propertyValue;
-        const newLine = `${camelCase(key.trim())}: ${propertyValue},`;
+        const newLine = `${key}: ${propertyValue},`;
         returnLines.push(newLine);
       }
     });
