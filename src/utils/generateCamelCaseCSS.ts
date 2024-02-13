@@ -3,11 +3,7 @@
  * @description camel case css generator
  */
 
-import isEmpty from "lodash.isempty";
-import camelCase from "lodash.camelcase";
-import startsWith from "lodash.startswith";
-import includes from "lodash.includes";
-import trim from "lodash.trim";
+import { isEmpty, includes, startsWith, trim, camelCase } from "lodash";
 
 import { removeQuotesFromString } from "./removeQuotes";
 import { convertWebkitPrefixedKey } from "./convertWebkitPrefixedKey";

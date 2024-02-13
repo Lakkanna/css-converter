@@ -3,8 +3,7 @@
  * @description kebab case css generator
  */
 
-import isEmpty from "lodash.isempty";
-import kebabCase from "lodash.kebabcase";
+import { isEmpty, kebabCase } from "lodash";
 import { addPrefixDashIfNeeded } from "./addPrefixDashIfNeeded";
 
 import { removeQuotesFromString } from "./removeQuotes";

@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-import isEmpty from "lodash.isempty";
+import { isEmpty } from "lodash";
 import getConvertedCSS from "./utils/getConvertedCSS";
 import writeToEditor from "./utils/writeToEditor";
 
