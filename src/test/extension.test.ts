@@ -1,7 +1,7 @@
 import * as assert from "assert";
 
-import generateKebabCaseCSS from "../utils/generateKebabCaseCSS";
 import generateCamelCaseCSS from "../utils/generateCamelCaseCSS";
+import generateKebabCaseCSS from "../utils/generateKebabCaseCSS";
 
 const camelCaseCss = `color: "red", fontWeight: "600",`;
 
@@ -22,6 +22,19 @@ suite("Extension Tests", function () {
   test("Should generate kebab-case css 1", function () {
     const testCss = ["color: red;", "font-weight: 600;"];
     const generatedCss = generateKebabCaseCSS(camelCaseCss.split(","));
+    assert.deepStrictEqual(testCss.join("\n"), generatedCss.join("\n"));
+  });
+  test("Should generate kebab-case css 1", function () {
+    const testCss = [
+      "background-color: #efefef;",
+      "padding: 4px 10px;",
+      "border-radius: 4px;",
+    ];
+    const generatedCss = generateKebabCaseCSS(
+      `backgroundColor: '#efefef', padding: '4px 10px', borderRadius: '4px',`.split(
+        ","
+      )
+    );
     assert.deepStrictEqual(testCss.join("\n"), generatedCss.join("\n"));
   });
 

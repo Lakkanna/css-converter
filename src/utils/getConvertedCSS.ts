@@ -4,9 +4,10 @@
  */
 
 import trim from "lodash.trim";
+import includes from "lodash.includes";
 
 import generateCamelCaseCSS from "./generateCamelCaseCSS";
-import generateKebabCaseCSS from "./generateKebabCaseCss";
+import generateKebabCaseCSS from "./generateKebabCaseCSS";
 import { removeNewLines } from "./removeNewLines";
 
 /**
@@ -17,16 +18,18 @@ import { removeNewLines } from "./removeNewLines";
 const getConvertedCSS = (text: string): string[] => {
   const cleanText = trim(removeNewLines(text));
   if (typeof cleanText === "string") {
-    let splittedText = cleanText.split(";");
+    const isCamelCased = includes(cleanText, "',") || includes(cleanText, '",');
+
+    let splittedText = cleanText.split(isCamelCased ? "," : ";");
 
     let convertedCss: string[] = [];
 
-    // HTML CSS to JS CSS (Generate Camel Case CSS)
-    if (splittedText.length > 1) {
-      convertedCss = generateCamelCaseCSS(splittedText);
+    // HTML CSS to JS CSS (Generate kebab-case CSS)
+    if (isCamelCased) {
+      convertedCss = generateKebabCaseCSS(cleanText.split(","));
     } else {
-      // JS CSS to HTML CSS (Generate kebab-case CSS)
-      convertedCss = generateKebabCaseCSS(cleanText.split('",'));
+      // JS CSS to HTML CSS (Generate camelCase CSS)
+      convertedCss = generateCamelCaseCSS(splittedText);
     }
     return convertedCss;
   }
