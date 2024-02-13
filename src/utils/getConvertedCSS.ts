@@ -3,8 +3,7 @@
  * @description css converter
  */
 
-import trim from "lodash.trim";
-import includes from "lodash.includes";
+import { trim, includes } from "lodash";
 
 import generateCamelCaseCSS from "./generateCamelCaseCSS";
 import generateKebabCaseCSS from "./generateKebabCaseCSS";

@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.4] - 2024-02-13
+
+### Fixed
+
+- Updated package dependency to use latest lodash to resolve security issue: https://github.com/Lakkanna/css-converter/security/dependabot/11
+
 ## [0.2.3] - 2024-02-13
 
 ### Fixed

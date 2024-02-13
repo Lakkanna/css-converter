@@ -1,4 +1,4 @@
-import startsWith from "lodash.startswith";
+import { startsWith } from "lodash";
 
 const addPrefixDashIfNeeded = (key: string): string => {
   if (startsWith(key, "webkit-")) {
