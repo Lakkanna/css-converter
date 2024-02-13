@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.2.3] - 2024-02-13
+
+### Fixed
+
+- Conversion to kebab case with quoted style was not working
+
+  Issue: https://github.com/Lakkanna/css-converter/issues/33
+
+- Updated test command to run test cases
+
 ## [0.2.2] - 2021-03-25
 
 ### Fixed
